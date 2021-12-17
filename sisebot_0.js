@@ -1,3 +1,7 @@
+
+
+
+
 /*   봇 컴파일   */
 function recompile_bot_func(){
     let compile_result = Api.compile("sisebot");
@@ -8,7 +12,6 @@ function recompile_bot_func(){
         return "Compile Failed";
     }
 }
-
 
 /*   업비트 코인가격   */
         if(str_split_Arr[0] == "/업비트"){
@@ -47,16 +50,12 @@ function recompile_bot_func(){
 
         }
         
-        
-        
         /*   업비트 JSON 함수   */
         function upbit_func(coin_symbol){
             let upbit_url = "https://api.upbit.com/v1/ticker?markets=KRW-";
             upbit_url += coin_symbol;
             return JSON.parse(org.jsoup.Jsoup.connect(upbit_url).ignoreContentType(true).get().text());
         }
-
-
 
         /*   화폐단위 컴마출력   */
         function numberWithCommas(x) {
